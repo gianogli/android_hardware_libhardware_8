@@ -325,12 +325,10 @@ typedef uint8_t                         GnssConstellationType;
  */
 #define GPS_GEOFENCING_INTERFACE   "gps_geofencing"
 
-#ifdef STE_SAMSUNG_HARDWARE
 /**
  * The GPS chipset can use Psc for AGPS.
  */
 #define AGPS_USE_PSC
-#endif
 
 /**
  * Name of the GPS Measurements interface.
@@ -394,10 +392,8 @@ typedef struct {
     float   elevation;
     /** Azimuth of SV in degrees. */
     float   azimuth;
-#ifdef STE_SAMSUNG_HARDWARE
     /** Unknown Samsung element. */
     int     padding;
-#endif
 } GpsSvInfo;
 
 typedef struct {
